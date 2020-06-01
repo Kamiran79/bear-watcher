@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bear Watcher</title>
+
+    <script src="https://kit.fontawesome.com/7148b64cae.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">    
 </head>
 <body>
     <h1>Bear-Wathcer</h1>
@@ -12,6 +17,42 @@
 
     <!-- Main Start-->
     <main>
+
+        <h1>Dino Kennel!!</h1>
+        <div class="mb-2 col-10 offset-1 add-section">
+          <div class="accordion" id="addDinoAccordion">
+            <div class="card">
+              <div class="card-header" id="addDinoFormCard">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-plus-circle"></i> Add New Bear to the Park:
+                  </button>
+                </h2>
+              </div>
+      
+              <div id="collapseOne" class="collapse" aria-labelledby="addDinoFormCard" data-parent="#addDinoAccordion">
+                <div class="card-body">
+                  <form class="row" id="new-dino-form">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="dino-name">Name</label>
+                        <input type="text" class="form-control" id="dino-name" aria-describedby="nameHelp" placeholder="Enter bear name">
+                      </div>
+                      <div class="form-group">
+                        <label for="dino-image">Image URL</label>
+                        <input type="text" class="form-control" id="dino-image" aria-describedby="imageHelp" placeholder="Enter image URL for the bear">
+                      </div>
+                    </div>
+                    <button type="submit" id="submit-new-dino" class="btn btn-outline-primary"><i class="fas fa-plus"></i> Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>        
+
+
         <!-- TODO Background Image-->
 
         <!-- TODO Background Title-->
@@ -19,15 +60,37 @@
         <!-- TODO Create the Form to Add a new Bear-->
 
         <!-- TODO Create Buttons RiverSide Rewards-->
+        <div id = "allAndRewards" class="container">            
+            <!--<button id="getAllBear" type="button" class="btn btn-secondary">River Side</button>
+            <button id="getNewRewards" type="button" class="btn btn-secondary float-right">Rewards</button> -->
+        </div>        
 
         <!-- Show the main text what is displaying below
               1. Best Bear (no Buttons)
               2. New Bear (Also Include the buttons)
               3. All Bears (RiverSide)
               4. Rewards-->
+        <div class="container">
+            <div class="row">
+                <div class="col align-self-start">
+                    <!--<button type="button" class="btn btn-secondary">River Side</button>-->
+                </div>
+                <div id="currentDisplay" class="col align-self-center">
+                    
+                </div>
+                <div class="col align-self-end">
+                    <!-- <button type="button" class="btn btn-secondary float-right">Rewards</button> -->
+                </div>
+            </div>
+        </div>
 
         <!-- Show 1.-->
-
+        <div class="container">
+            <div id = "bestBear" class="row"></div>            
+        </div>        
+        <div class="container">
+            <div id = "reiverSide" class="row"></div>            
+        </div>
         <!-- Show 2.-->
 
         <!-- Show 3.-->
@@ -38,5 +101,15 @@
 
     <!-- Footer Start-->
     <!-- Footer End-->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
