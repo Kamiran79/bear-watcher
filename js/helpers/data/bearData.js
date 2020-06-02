@@ -8,6 +8,7 @@ let bearInfo = [
         currentRewards: 'none',
         lastRewards: 'Gold',
         fat: 0.0,
+        currentCatch: 0,
     },
     {
         id: 1,
@@ -18,6 +19,7 @@ let bearInfo = [
         currentRewards: 'none',
         lastRewards: 'Silver',
         fat: 0.0,
+        currentCatch: 0,
     },
     {
         id: 2,
@@ -28,6 +30,7 @@ let bearInfo = [
         currentRewards: 'none',
         lastRewards: 'Bronze',
         fat: 0.0,
+        currentCatch: 0,
     },        
 ]
 
@@ -50,18 +53,26 @@ const getBear = () => {
     return bearInfo;
 }
 
+let selectedBestBearIndex;
 let selectedBestBear;
 
-const settBestBear = () => {
+const getBestBear = () => {
+    console.log("got called in the main to send to bear display");
     const myIndex = (element) => element.currentRewards === 'Gold';
     const myLastBestBear = (element) => element.lastRewards === 'Gold';
-    let selectedBestBear = bearInfo.findIndex(myIndex);
-    if (selectedBestBear === -1) {
-        selectedBestBear = bearInfo.findIndex(myLastBestBear);
+    let selectedBestBearIndex = bearInfo.findIndex(myIndex);
+    if (selectedBestBearIndex === -1) {
+        selectedBestBearIndex = bearInfo.findIndex(myLastBestBear);
     }
+    for (let i = 0; i < bearInfo.length; i++) {
+        if (i === selectedBestBear) {
+            getSelectedBestBear = bearInfo[i];
+        }
+    }
+    return selectedBestBear;
 }
 
-const getSelectedBestBear = () => selectedBestBear;
+//const getSelectedBestBear = () => selectedBestBear;
 
 
-export default { getBear, settBestBear, getSelectedBestBear };
+export default { getBear, getBestBear };

@@ -1,9 +1,10 @@
 console.log('connected1');
 
 import bearDisplay from "./components/bearDisplay.js";
-import BestBear from "./components/BestBear.js";
-import ControlEvent from "./components/ControlEvent.js";
+//import BestBear from "./components/BestBear.js";
+//import ControlEvent from "./components/ControlEvent.js";
 import AllAndRewards from "./components/AllAndRewards.js";
+//import bearData from "./helpers/data/bearData.js";
 
 console.log('connected2');
 
@@ -19,12 +20,13 @@ const clickEvents = () => {
 //    document.querySelector('#getAllBear').addEventListener('click', )
 }
 
-ControlEvent.attachEvents();
+//ControlEvent.attachEvents();
 
 const init = () => {
     AllAndRewards.makeAllRewardsButtons();
-    bearDisplay.buildBearCard();    
-    clickEvents();
+    //const bearInfo = bearData.getBear();
+    bearDisplay.buildBestBearCard();    
+    //clickEvents();
     //BestBear.buildBestBearCard();
     
 }
