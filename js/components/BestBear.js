@@ -15,7 +15,7 @@ const buildBestBearCard = () => {
     }
 
     let domString = '';
-    domString = `<h2> Let's have some fun with helping bear to catch some fish! </h2>`;
+    domString = `<h2> Let's have some fun with helping bears to catch fish! </h2>`;
     utils.printToDom("#currentDisplay", domString);
     for (let i = 0; i < bearInfo.length; i++) {        
         if (i === getBestBear){
