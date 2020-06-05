@@ -1,5 +1,5 @@
 
-
+// Not Active .. 
 
 const updateCard = (e) => {
     console.log("fire event");
