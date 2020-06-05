@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto+Slab:wght@100;400&display=swap');
+
 body {
     background-color: darkgoldenrod;
+}
+
+.niceFonts {
+  font-family: cursive;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;  
 }
 
 .card-img-top1 {
@@ -7,12 +16,26 @@ body {
     height: 30vh;
     object-fit: cover;
     object-position: top;
-  }
+}
 
-  .rectangle {
+.rectangle {
     width: 200px;
     height: 100px;
     background: red;
     padding: 8px;
     border-radius: 3px;
-  }
+}
+
+.myColor {
+  color:green;
+}
+
+.myFormColor {
+  border-radius: 10%;
+  
+}
+
+.myMainForm {
+  background-image: url('https://static.rootsrated.com/image/upload/s--L80bGRP---/t_rr_large_traditional/kdl4xsflm6utgcvzohun.jpg');
+
+}

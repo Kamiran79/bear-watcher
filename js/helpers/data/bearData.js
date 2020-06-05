@@ -1,36 +1,42 @@
 let bearInfo = [
     {
         id: 0,
-        name: 'bear0',
+        name: 'Tommy',
         imageUrl: 'https://www.adventure-journal.com/wp-content/uploads/2016/10/14589601_1307409822617146_4238528938302334714_o.jpg',
         totalFish: 0,
         duration: 0.0,
         currentRewards: 'none',
         lastRewards: 'Gold',
         fat: 0.0,
+        currentFat: 0.0,
         currentCatch: 0,
+        catchColor: 'secondary',
     },
     {
         id: 1,
-        name: 'bear1',
+        name: 'Sammy',
         imageUrl: 'https://www.doi.gov/sites/doi.gov/files/blog-post/thumbnail-images/katmai-np-nps-photo-j-cuomo-fat-bear.jpg',
         totalFish: 0,
         duration: 0.0,
         currentRewards: 'none',
         lastRewards: 'Silver',
         fat: 0.0,
+        currentFat: 0.0,
         currentCatch: 0,
+        catchColor: 'secondary',
     },
     {
         id: 2,
-        name: 'bear2',
+        name: 'Lazzy',
         imageUrl: 'https://cdn.vox-cdn.com/thumbor/1vBidqu1XYzzCf8md2Lm-VS-EXE=/0x0:1920x1280/1200x675/filters:focal(807x487:1113x793)/cdn.vox-cdn.com/uploads/chorus_image/image/61706269/44382577324_a5fb622fab_o.0.jpg',
         totalFish: 0,
         duration: 0.0,
         currentRewards: 'none',
         lastRewards: 'Bronze',
         fat: 0.0,
+        currentFat: 0.0,
         currentCatch: 0,
+        catchColor: 'secondary',
     },        
 ]
 
@@ -53,26 +59,5 @@ const getBear = () => {
     return bearInfo;
 }
 
-let selectedBestBearIndex;
-let selectedBestBear;
 
-const getBestBear = () => {
-    console.log("got called in the main to send to bear display");
-    const myIndex = (element) => element.currentRewards === 'Gold';
-    const myLastBestBear = (element) => element.lastRewards === 'Gold';
-    let selectedBestBearIndex = bearInfo.findIndex(myIndex);
-    if (selectedBestBearIndex === -1) {
-        selectedBestBearIndex = bearInfo.findIndex(myLastBestBear);
-    }
-    for (let i = 0; i < bearInfo.length; i++) {
-        if (i === selectedBestBear) {
-            getSelectedBestBear = bearInfo[i];
-        }
-    }
-    return selectedBestBear;
-}
-
-//const getSelectedBestBear = () => selectedBestBear;
-
-
-export default { getBear, getBestBear };
+export default { getBear };
