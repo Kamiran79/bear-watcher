@@ -3,7 +3,7 @@ import utils from "../helpers/utils.js";
 import BestBear from "./BestBear.js";
 
 const myBear = bearData.getBear();
-//const findDinoIndexById = (bearID) => mybear.findIndex(bear.id === bearID);
+
 let fishCatch = 0;
 
 const updateCard = (e) => {
@@ -15,6 +15,12 @@ const updateCard = (e) => {
     for (let i = 0; i<myBear.length; i++) {
         myBear[i].currentCatch = 0;
         myBear[i].catchColor = 'secondary';
+        if (fish === 0) {
+            myBear[i].bearAction = 'https://media1.tenor.com/images/8cb226a97a0388904f0c5cee29fcb943/tenor.gif?itemid=8725056';            
+        } else {
+            myBear[i].bearAction = 'https://media.giphy.com/media/l3dj3g9lBW9LWKNDW/giphy.gif';
+        }        
+        //myBear[i].bearAction = 'https://media1.tenor.com/images/8cb226a97a0388904f0c5cee29fcb943/tenor.gif?itemid=8725056';
         if (myBear[i].id === Number(bearID)) {            
             myBear[i].totalFish +=fish;
             myBear[i].duration +=1;
@@ -22,8 +28,10 @@ const updateCard = (e) => {
             myBear[i].currentCatch = fish;
             if (fish > 0) {
                 myBear[i].catchColor = 'success';
+                myBear[i].bearAction = 'https://thumbs.gfycat.com/PettyNeedyAlbatross-size_restricted.gif';
             } else {
                 myBear[i].catchColor = 'danger';
+                myBear[i].bearAction = 'https://media.giphy.com/media/Osub6rry9Pu2k/giphy.gif';
             }
         }
     }
@@ -36,16 +44,26 @@ const buildBearCard = () => {
     for (let i = 0; i < bearInfo.length; i++) {
         domString +=`
             <div class ="col-sm-4">
-                <div id="${bearInfo[i].id}" class="card mb-4 bear-card" style="width: 22rem;">
+                <div id="${bearInfo[i].id}" class="card mb-4 bear-card" style="width: 18rem;">
                     <img src="${bearInfo[i].imageUrl}" class="card-img-top card-img-top1" alt="...">
+                    `;
+        if (bearInfo[i].currentRewards === 'Gold') {
+            domString += `<div class="top-right1"><i class="fas fa-star"></i></div>`;
+        } else if (bearInfo[i].currentRewards === 'Silver') {
+            domString += `<div class="top-right2"><i class="fas fa-star"></i></div>`;
+        } else if (bearInfo[i].currentRewards === 'Bronze') {
+            domString += `<div class="top-right3"><i class="fas fa-star"></i></div>`;
+        }
+        domString +=`
                     <div class="card-body">
                         <h5 class="card-title">${bearInfo[i].name}</h5>   
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Current Total Fish catchs: ${bearInfo[i].totalFish}</li>
-                            <li class="list-group-item">Duration: ${bearInfo[i].duration} hrs.</li>
-                            <li class="list-group-item">Fat: ${bearInfo[i].fat.toFixed(3)}</li>
-                            <li class="list-group-item">Rewards: ${bearInfo[i].currentRewards} & Fat: ${bearInfo[i].currentFat.toFixed(3)}</li>
-                            <li class="list-group-item">Last Rewards: ${bearInfo[i].lastRewards}</li>
+                            <li class="list-group-item"><span class="font-weight-bold">Current total fish catchs:</span> ${bearInfo[i].totalFish}</li>
+                            <li class="list-group-item"><span class="font-weight-bold">Duration:</span> ${bearInfo[i].duration} hrs. <span class="font-weight-bold">Fat:</span> ${bearInfo[i].fat.toFixed(2)}</li>                            
+                            <li class="list-group-item"><span class="font-weight-bold">Rewards:</span> ${bearInfo[i].currentRewards}<span class="font-weight-bold"> & Fat:</span> ${bearInfo[i].currentFat.toFixed(2)}</li>
+                            <li class="list-group-item"><span class="font-weight-bold">Last Rewards:</span> ${bearInfo[i].lastRewards}</li>                            
+                            <li class="list-group-item"><img src="${bearInfo[i].bearAction}" class="card-img-top card-img-top1" alt="...">
+                            <div class="top-left font-weight-bold">Bear In Action:</div></li>
                         </ul>                                         
                     </div>
                     <div class="card-body">                        
@@ -74,6 +92,7 @@ const newRewards = (e) => {
             myBear[i].fat = 0;
             myBear[i].currentCatch = 0;
             myBear[i].catchColor = 'secondary';
+            myBear[i].bearAction = 'https://media0.giphy.com/media/m4dxDLChOTGFy/giphy.gif';
         } else if (i === 1) {
             myBear[i].lastRewards = myBear[i].currentRewards;
             myBear[i].currentRewards = 'Silver';
@@ -83,6 +102,7 @@ const newRewards = (e) => {
             myBear[i].fat = 0;
             myBear[i].currentCatch = 0;
             myBear[i].catchColor = 'secondary';
+            myBear[i].bearAction = 'https://media.tenor.com/images/b47cafe43549f3e83aac86835347dde4/tenor.gif';
         } else if (i === 2) {
             myBear[i].lastRewards = myBear[i].currentRewards;
             myBear[i].currentRewards = 'Bronze';            
@@ -91,7 +111,8 @@ const newRewards = (e) => {
             myBear[i].duration = 0;
             myBear[i].fat = 0;
             myBear[i].currentCatch = 0;
-            myBear[i].catchColor = 'secondary';            
+            myBear[i].catchColor = 'secondary';
+            myBear[i].bearAction = 'https://i.pinimg.com/originals/b2/76/93/b276939d53dcd373ff2571ca455ea97c.gif';
         } else {
             myBear[i].lastRewards = myBear[i].currentRewards;
             myBear[i].currentRewards = 'none';            
@@ -100,7 +121,8 @@ const newRewards = (e) => {
             myBear[i].duration = 0;
             myBear[i].fat = 0;
             myBear[i].currentCatch = 0;
-            myBear[i].catchColor = 'secondary';                          
+            myBear[i].catchColor = 'secondary';
+            myBear[i].bearAction = 'https://fitznaturalist.files.wordpress.com/2019/09/435-holly_09252019.gif?w=300';
         }
     }
     buildBearCard();    
