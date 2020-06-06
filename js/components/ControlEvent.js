@@ -10,10 +10,7 @@ const genericEventAttacher = (selector, functionToAttach) => {
 };
 
 const attachEvents = () => {
-    //genericEventAttacher('.getFish', updateCard);
     genericEventAttacher('getAllBear', bearDisplay.buildBearCard());
-    //genericEventAttacher('.delete-dino', deleteThisDinoEvent);
-    //genericEventAttacher('.pet-button', petThisDinoEvent);
 };
 
 export default { attachEvents };

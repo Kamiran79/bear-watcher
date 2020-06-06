@@ -3,7 +3,6 @@ import utils from "../helpers/utils.js";
 import BestBear from "./BestBear.js";
 
 const myBear = bearData.getBear();
-
 let fishCatch = 0;
 
 const updateCard = (e) => {
@@ -35,6 +34,9 @@ const updateCard = (e) => {
             }
         }
     }
+    let domString = '';
+    domString = `<h2>Let's have fun with helping the bears to catch fish!</h2>`;
+    utils.printToDom("#currentDisplay", domString);    
     buildBearCard();
 }
 
@@ -44,7 +46,7 @@ const buildBearCard = () => {
     for (let i = 0; i < bearInfo.length; i++) {
         domString +=`
             <div class ="col-sm-4">
-                <div id="${bearInfo[i].id}" class="card mb-4 bear-card" style="width: 18rem;">
+                <div id="${bearInfo[i].id}" class="card mb-4 bear-card" style="width: 22rem;">
                     <img src="${bearInfo[i].imageUrl}" class="card-img-top card-img-top1" alt="...">
                     `;
         if (bearInfo[i].currentRewards === 'Gold') {
@@ -58,17 +60,17 @@ const buildBearCard = () => {
                     <div class="card-body">
                         <h5 class="card-title">${bearInfo[i].name}</h5>   
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><span class="font-weight-bold">Current total fish catchs:</span> ${bearInfo[i].totalFish}</li>
+                            <li class="list-group-item"><span class="font-weight-bold">Total Fish Catched:</span> ${bearInfo[i].totalFish}</li>
                             <li class="list-group-item"><span class="font-weight-bold">Duration:</span> ${bearInfo[i].duration} hrs. <span class="font-weight-bold">Fat:</span> ${bearInfo[i].fat.toFixed(2)}</li>                            
-                            <li class="list-group-item"><span class="font-weight-bold">Rewards:</span> ${bearInfo[i].currentRewards}<span class="font-weight-bold"> & Fat:</span> ${bearInfo[i].currentFat.toFixed(2)}</li>
-                            <li class="list-group-item"><span class="font-weight-bold">Last Rewards:</span> ${bearInfo[i].lastRewards}</li>                            
+                            <li class="list-group-item"><span class="font-weight-bold">Reward:</span> ${bearInfo[i].currentRewards}<span class="font-weight-bold"> & Fat:</span> ${bearInfo[i].currentFat.toFixed(2)}</li>
+                            <li class="list-group-item"><span class="font-weight-bold">Last Reward:</span> ${bearInfo[i].lastRewards}</li>                            
                             <li class="list-group-item"><img src="${bearInfo[i].bearAction}" class="card-img-top card-img-top1" alt="...">
                             <div class="top-left font-weight-bold">Bear In Action:</div></li>
                         </ul>                                         
                     </div>
                     <div class="card-body">                        
                         <button type="button" class="btn btn-primary getFish">Catch Fish</button>                        
-                        <a href="#" class="btn btn-${bearInfo[i].catchColor}">Fish Catch: ${bearInfo[i].currentCatch}</a>
+                        <a href="#" class="btn btn-${bearInfo[i].catchColor}">Catched: ${bearInfo[i].currentCatch}</a>
                     </div>
                 </div>
             </div>
@@ -125,6 +127,11 @@ const newRewards = (e) => {
             myBear[i].bearAction = 'https://fitznaturalist.files.wordpress.com/2019/09/435-holly_09252019.gif?w=300';
         }
     }
+
+    let domString = '';
+    domString = `<h2>Click on the catch fish button to start new season!</h2>`;
+    utils.printToDom("#currentDisplay", domString);
+    
     buildBearCard();    
     i=0;
 }
