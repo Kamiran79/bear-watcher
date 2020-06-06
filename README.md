@@ -23,16 +23,16 @@
 ![Home Page](https://github.com/Kamiran79/bear-watcher/blob/master/screenshots/homePage.png)
 
 **River Side show all bears**
-![River Side](./screenshots/riverside1.PNG)
+![River Side](https://github.com/Kamiran79/bear-watcher/blob/master/screenshots/riverSide1.PNG)
 
 **Bear in Action when catching fish**
-![Bear in Action1](./screenshots/riverside2.PNG)
+![Bear in Action1](https://github.com/Kamiran79/bear-watcher/blob/master/screenshots/riverSide2.PNG)
 
 **Bear in Action when didn't catched fish**
-![Bear in Action2](./screenshots/riverside3.PNG)
+![Bear in Action2](https://github.com/Kamiran79/bear-watcher/blob/master/screenshots/riverSide3.PNG)
 
 **Rewards Bears**
-![Rewards Bears](./screenshots/rewardsbear.PNG)
+![Rewards Bears](https://github.com/Kamiran79/bear-watcher/blob/master/screenshots/rewardsBear.PNG)
 
 **Adding new bear**
 ![Add New Bear](./screenshots/addnew.PNG)
