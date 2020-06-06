@@ -20,7 +20,7 @@
 ## Screenshots
 
 **Home Page - Landing Page**
-![Home Page](./screenshots/homepage.PNG)
+![Home Page](./screenshots/homepage.png)
 
 **River Side show all bears**
 ![River Side](./screenshots/riverside1.PNG)
