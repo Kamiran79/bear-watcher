@@ -20,7 +20,7 @@
 ## Screenshots
 
 **Home Page - Landing Page**
-![Home Page](./screenshots/homepage.png)
+![Home Page](https://github.com/Kamiran79/bear-watcher/blob/master/screenshots/homePage.png)
 
 **River Side show all bears**
 ![River Side](./screenshots/riverside1.PNG)
