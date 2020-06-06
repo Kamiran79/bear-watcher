@@ -1,5 +1,6 @@
 import bearData from "../helpers/data/bearData.js";
 import bearDisplay from "./bearDisplay.js";
+import utils from "../helpers/utils.js"
 
 
 const createNewBear = (e) => {
@@ -26,6 +27,9 @@ const createNewBear = (e) => {
         bear.catchColor = 'secondary';
     });
     bearInfo.unshift(newBear);
+    let domString = '';
+    domString = `<h2>Welcome ${newBear.name} to the bear group!</h2>`;
+    utils.printToDom("#currentDisplay", domString);    
     bearDisplay.buildBearCard();
 };
 

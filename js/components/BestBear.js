@@ -15,7 +15,7 @@ const buildBestBearCard = () => {
     }
 
     let domString = '';
-    domString = `<h2> Let's have some fun with helping bears to catch fish! </h2>`;
+    domString = `<h2>Let's have fun with helping the bears to catch fish!</h2>`;
     utils.printToDom("#currentDisplay", domString);
     for (let i = 0; i < bearInfo.length; i++) {        
         if (i === getBestBear){
@@ -26,10 +26,10 @@ const buildBestBearCard = () => {
                         <div class="card-body">
                             <h5 class="card-title">${bearInfo[i].name}</h5>   
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Current Total Fish catchs: ${bearInfo[i].totalFish}</li>
+                                <li class="list-group-item">Total Fish Catched: ${bearInfo[i].totalFish}</li>
                                 <li class="list-group-item">Duration: ${bearInfo[i].duration}</li>
-                                <li class="list-group-item">Current Rewards: ${bearInfo[i].currentRewards}</li>
-                                <li class="list-group-item">Last Rewards: ${bearInfo[i].lastRewards}</li>
+                                <li class="list-group-item">Current Reward: ${bearInfo[i].currentRewards}</li>
+                                <li class="list-group-item">Last Reward: ${bearInfo[i].lastRewards}</li>
                             </ul>                                         
                         </div>
                     </div>                
