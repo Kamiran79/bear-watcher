@@ -20,23 +20,22 @@
 ## Screenshots
 
 **Home Page - Landing Page**
-![alt text](./screenshots/homepage.PNG "Home Page")
-
+![Home Page](./screenshots/homepage.PNG)
 
 **River Side show all bears**
-![alt text](./screenshots/riverside1.PNG "River Side")
+![River Side](./screenshots/riverside1.PNG)
 
 **Bear in Action when catching fish**
-![alt text](./screenshots/riverside2.PNG "Bear in Action1")
+![Bear in Action1](./screenshots/riverside2.PNG)
 
 **Bear in Action when didn't catched fish**
-![alt text](./screenshots/riverside3.PNG "Bear in Action2")
+![Bear in Action2](./screenshots/riverside3.PNG)
 
 **Rewards Bears**
-![alt text](./screenshots/rewardsbear.PNG "Rewards Bears")
+![Rewards Bears](./screenshots/rewardsbear.PNG)
 
 **Adding new bear**
-![alt text](./screenshots/addnew.PNG "Add New Bear")
+![Add New Bear](./screenshots/addnew.PNG)
 
 ## How To Run
 
