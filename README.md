@@ -24,19 +24,19 @@
 
 
 **River Side show all bears**
-![alt text](./screenshots/riverside1.PNG "Home Page")
+![alt text](./screenshots/riverside1.PNG "River Side")
 
 **Bear in Action when catching fish**
-![alt text](./screenshots/riverside2.PNG "Home Page")
+![alt text](./screenshots/riverside2.PNG "Bear in Action1")
 
 **Bear in Action when didn't catched fish**
-![alt text](./screenshots/riverside3.PNG "Home Page")
+![alt text](./screenshots/riverside3.PNG "Bear in Action2")
 
 **Rewards Bears**
-![alt text](./screenshots/rewardsbear.PNG "Home Page")
+![alt text](./screenshots/rewardsbear.PNG "Rewards Bears")
 
 **Adding new bear**
-![alt text](./screenshots/addnew.PNG "Home Page")
+![alt text](./screenshots/addnew.PNG "Add New Bear")
 
 ## How To Run
 
