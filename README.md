@@ -42,3 +42,6 @@
 1. Clone down this repo
 2. Use your favorite http server (like live server) ti serve it up (hs)
 3. in your browser, go where it's bieng served (default is localhost:8081)
+
+## Contributors:
+* [Kamiran Ibrahim](https://github.com/Kamiran79)
